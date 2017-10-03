@@ -7,7 +7,7 @@ Heroku does SSL termination at its load balancer. However, the app can tell if t
 ## Installation
 
 ```sh
-go get github.com/jonahgeorge/force-ssl-heroku
+go get gopkg.in/jonahgeorge/force-ssl-heroku.v1
 ```
 
 ## Usage
@@ -18,7 +18,7 @@ package main
 import (
 	"net/http"
 
-	"github.com/jonahgeorge/force-ssl-heroku"
+        heroku "gopkg.in/jonahgeorge/force-ssl-heroku.v1"
 )
 
 func helloWorldHandler(w http.ResponseWriter, r *http.Request) {
@@ -29,7 +29,7 @@ func main() {
 	r := http.NewServeMux()
 	r.HandleFunc("/", helloWorldHandler)
 
-	http.ListenAndServe(":8080", forcesslheroku.ForceSsl(r))
+	http.ListenAndServe(":8080", heroku.ForceSsl(r))
 }
 ```
 
