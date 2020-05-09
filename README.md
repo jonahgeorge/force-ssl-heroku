@@ -7,7 +7,7 @@ Heroku does SSL termination at its load balancer. However, the app can tell if t
 ## Installation
 
 ```sh
-go get gopkg.in/jonahgeorge/force-ssl-heroku.v1
+go get github.com/jonahgeorge/force-ssl-heroku
 ```
 
 ## Usage
