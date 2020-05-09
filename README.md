@@ -18,7 +18,7 @@ package main
 import (
 	"net/http"
 
-        heroku "gopkg.in/jonahgeorge/force-ssl-heroku.v1"
+        heroku "github.com/jonahgeorge/force-ssl-heroku"
 )
 
 func helloWorldHandler(w http.ResponseWriter, r *http.Request) {
